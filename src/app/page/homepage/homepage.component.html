@@ -1,0 +1,16 @@
+<app-card></app-card>
+<span *ngIf="menu == 'email'">
+    <app-email-profile></app-email-profile>
+</span>
+<span *ngIf="menu == 'birthday'">
+    <app-birthday-profile></app-birthday-profile>
+</span>
+<span *ngIf="menu == 'adress'">
+    <app-abress-profile></app-abress-profile>
+</span>
+<span *ngIf="menu == 'phone'">
+    <app-phone-profile></app-phone-profile>
+</span>
+<span *ngIf="menu == 'account'">
+    <app-auth-profile></app-auth-profile>
+</span>
