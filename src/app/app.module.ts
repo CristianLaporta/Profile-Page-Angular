@@ -10,7 +10,6 @@ import { BirthdayProfileComponent } from './component/birthday-profile/birthday-
 import { AbressProfileComponent } from './component/adress-profile/abress-profile.component';
 import { PhoneProfileComponent } from './component/phone-profile/phone-profile.component';
 import { AuthProfileComponent } from './component/auth-profile/auth-profile.component';
-import { NavbarComponent } from './component//navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 
 
@@ -24,7 +23,6 @@ import { FooterComponent } from './component/footer/footer.component';
     AbressProfileComponent,
     PhoneProfileComponent,
     AuthProfileComponent,
-    NavbarComponent,
     FooterComponent,
   ],
   imports: [
