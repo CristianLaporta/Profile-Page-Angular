@@ -16,8 +16,10 @@ export class HomepageService {
     this.http.get<IUser>("https://randomuser.me/api").subscribe((data: IUser) => {
       this.user = data;
       this.spinner = false;
-    });
+    },
+    (error) => {    
+      alert("ERRORE"+" "+ error.message);
+          }
+    );
   }
-
-
 }
