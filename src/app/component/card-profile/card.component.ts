@@ -19,7 +19,6 @@ export class CardComponent implements OnInit {
   ngDoCheck(): void {
     this.user = this.HomepageService.user;
     this.spinner = this.HomepageService.spinner;
-    console.log(this.user)
   }
   changeMenu(param: string) {
     this.menu = param;

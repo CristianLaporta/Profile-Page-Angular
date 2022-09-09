@@ -1,18 +1,50 @@
 <app-card></app-card>
-<span *ngIf="menu == 'email'">
-    <app-email-profile></app-email-profile>
-</span>
-<span *ngIf="menu == 'birthday'">
-    <app-birthday-profile></app-birthday-profile>
-</span>
-<span *ngIf="menu == 'adress'">
-    <app-abress-profile></app-abress-profile>
-</span>
-<span *ngIf="menu == 'phone'">
-    <app-phone-profile></app-phone-profile>
-</span>
-<span *ngIf="menu == 'account'">
-    <app-auth-profile></app-auth-profile>
-</span>
-<br>
-<app-footer></app-footer>
+<div id="container">
+    <div class="spinner-container">
+        <img *ngIf="user == undefined" class="spinner" src="../../../assets/spinner.gif" alt="spinner">
+    </div>
+    <div *ngIf="user">
+        <span *ngIf="menu == 'email'">
+            <div>
+                <h2>Email Utente:</h2>
+                <p>{{user.results[0].email}}</p>
+            </div>
+        </span>
+        <span *ngIf="menu == 'birthday'">
+            <div>
+                <h2>Data di nascita:</h2>
+                <p>{{user.results[0].dob.date}} ({{user.results[0].dob.age}} Anni)</p>
+            </div>
+        </span>
+        <span *ngIf="menu == 'adress'">
+            <div>
+                <h2>Cittá</h2>
+                <p>{{user.results[0].location.city}}</p>
+                <h2>Stato:</h2>
+                <p>{{user.results[0].location.state}}</p>
+                <h2>Nazione:</h2>
+                <p>{{user.results[0].location.country}}</p>
+            </div>
+        </span>
+        <span *ngIf="menu == 'phone'">
+            <div>
+                <h2>Telefono:</h2>
+                <p>{{user.results[0].phone}}</p>
+                <h2>Cellulare:</h2>
+                <p>{{user.results[0].cell}}</p>
+            </div>
+        </span>
+        <span *ngIf="menu == 'account'">
+            <div>
+                <h2>E-mail</h2>
+                <p>{{user.results[0].email}}</p>
+                <h2>Username:</h2>
+                <p>{{user.results[0].login.username}}</p>
+                <h2>Password:</h2>
+                <p>{{user.results[0].login.password}}</p>
+            </div>
+        </span>
+    </div>
+</div>
+    <br>
+    <app-footer></app-footer>

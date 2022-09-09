@@ -1,9 +1,0 @@
-<div id="container">
-    <div class="spinner-container">
-        <img *ngIf="user == undefined" class="spinner" src="../../../assets/spinner.gif" alt="spinner">
-    </div>
-    <div *ngIf="user">
-        <h2>Data di nascita:</h2>
-        <p>{{user.results[0].dob.date}} ({{user.results[0].dob.age}} Anni)</p>
-    </div>
-</div>

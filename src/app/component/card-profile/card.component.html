@@ -2,7 +2,7 @@
 	<div id="hero-img"></div>
 	<div id="profile-img">
 		<img *ngIf="spinner" src="../../../assets/spinner.gif" alt="spinner">
-		<img *ngIf="user" src="{{user.results[0].picture.large}}" alt="avatar" />
+		<img *ngIf="user" src="{{user.results[0].picture.large}}"   onerror="this.src='../../../assets/user/nouser.png';" alt="avatar" />
 	</div>
 	<div id="content">
 		<h1 *ngIf="user">{{user.results[0].name.title}} {{user.results[0].name.first}} {{user.results[0].name.last}}
